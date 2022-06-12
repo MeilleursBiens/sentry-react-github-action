@@ -1,7 +1,5 @@
 #!/bin/sh
 
-set -e
-
 printenv
 
 # Create new Sentry release
