@@ -44,14 +44,16 @@ This action creates a Sentry release and deployment for your React app and uploa
 ## Example usage
 
 ```yaml
-uses: candidco/sentry-react-release@v1
-env:
-  SENTRY_ORG: some-org
-  SENTRY_AUTH_TOKEN: ${{ secrets.SENTRY_TOKEN }}
-  SENTRY_PROJECT: awesome-project
-  RELEASE: commit-hash
-  GITHUB_PROJECT: some-org/awesome-project
-  DEPLOY_ENV: production
-  URL_PREFIX: ~/static/js
-  SOURCEMAP_PATH: build/static/js
+- name: Create Sentry release
+        uses: MeilleursBiens/sentry-react-github-action@v1.1.4
+        env:
+          SENTRY_ORG: ${{ secrets.SENTRY_ORG }}
+          SENTRY_AUTH_TOKEN: ${{ secrets.SENTRY_AUTH_TOKEN }}
+          SENTRY_PROJECT: ${{ secrets.SENTRY_PROJECT }}
+          RELEASE: v${{ steps.package-version.outputs.current-version}}
+          COMMIT: ${{ github.sha }}
+          GITHUB_PROJECT: org/project
+          DEPLOY_ENV: production
+          URL_PREFIX: ~/static/js
+          SOURCEMAP_PATH: build/static/js
 ```
