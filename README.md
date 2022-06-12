@@ -21,6 +21,10 @@ This action creates a Sentry release and deployment for your React app and uploa
 
 **Required** The name of the release.
 
+#### `COMMIT`
+
+**Required** The hash of the commit.
+
 #### `GITHUB_PROJECT`
 
 **Required** The GitHub project with which this release will be associated.
