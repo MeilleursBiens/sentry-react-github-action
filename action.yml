@@ -4,3 +4,6 @@ author: 'Clément de Louvencourt <clement@meilleursbiens.com>'
 runs:
   using: 'docker'
   image: 'Dockerfile'
+branding:
+  color: red
+  icon: alert-triangle
