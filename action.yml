@@ -1,0 +1,6 @@
+name: 'Sentry React Release'
+description: 'Create a Sentry release and deployment for your React app.'
+author: 'Clément de Louvencourt <clement@meilleursbiens.com>'
+runs:
+  using: 'docker'
+  image: 'Dockerfile'
