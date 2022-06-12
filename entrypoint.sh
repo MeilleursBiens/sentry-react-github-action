@@ -2,6 +2,8 @@
 
 set -e
 
+printenv
+
 # Create new Sentry release
 sentry-cli releases new -p $SENTRY_PROJECT $RELEASE
 sentry-cli releases set-commits "$RELEASE" --commit "$GITHUB_PROJECT@$RELEASE"
